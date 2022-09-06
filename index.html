@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>Wheather Checker</title>
+  <style>
+    :root {
+      --bcg-darken-3: rgba(33, 33, 33, 0.7);
+    }
+
+    nav#nav {
+      background: var(--bcg-darken-3);
+      border-radius: 3px;
+      padding: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+    
+    .section {
+      padding: 3rem 0 0;
+      margin-bottom: 0;
+    }
+
+    .article {
+      margin: 0
+    }
+
+    .article:first-child {
+      padding-top: 2rem;
+    }
+
+    .week-day {
+      margin: 1rem 0;
+    }
+
+    #search {
+      color: white;
+      border-radius: 3px;
+    }
+    #search:focus {
+      color: black;
+    }
+
+    #selected {
+      margin: -0.8rem 0 ;
+      line-height: 1;
+    }
+
+    #headerWrapper {
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+
+    #forecastWrapper {
+      background-color: var(--bcg-darken-3);
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+  </style>
+</head>
+
+<body class="blue lighten-2">
+  <!-- Search Bar -->
+  <section class="section container row">
+    <nav class="col s12 m8 l6 offset-m2 offset-l3" id="nav">
+      <div class="nav-wrapper">
+        <form id="searchForm">
+          <div class="input-field">
+            <input id="search" type="search" required placeholder="Search..">
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+        <p class="grey-text text-darken-4" id="selected">Selected: <strong id="selectedResult">Albuquerque, New Mexico</strong></p>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Current Weather Header -->
+  <header class="section container row">
+    <div class="col s12 m8 l6 offset-m2 offset-l3 grey darken-4" id="headerWrapper">
+
+      <div class="row white-text valign-wrapper">
+        <div class="col s5 center-align">
+          <h4 id="currentTemperature"></h4>
+          <p id="currentFeels"></p>
+        </div>
+
+        <div class="col s4">
+          <h6 id="currentSky">
+
+          </h6>
+          <p id="currentArea"></p>
+        </div>
+
+        <div class="col s4 center-align">
+          <img id="currentImg" src="">
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 5 Days Forecast Section-->
+  <section class="container row white-text #forecastSection">
+    <div class="col s12 m8 l6 offset-m2 offset-l3" id="forecastWrapper">
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>
